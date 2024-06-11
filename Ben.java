@@ -8,9 +8,22 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Ben extends Actor
 {
-   priv
+   private int vSpeed = 0;
+   private int acceleration = 1;
+   private int jumpStrength = 15;
+   private boolean onground = true;
     public void act()
     {
-        // Add your action code here.
+        checkKeys();
+        
+    }
+    private void checkKeys() {
+        if (Greenfoot.isKeyDown("space") && onground){
+            jump();
+        }
+    }
+    private void jump() {
+        vSpeed = -jumpStrength;
+        onground = false;
     }
 }
