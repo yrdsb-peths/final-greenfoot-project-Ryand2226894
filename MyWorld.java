@@ -14,11 +14,19 @@ public class MyWorld extends World
      * 
      */
     public MyWorld()
-    {    
+    {
+        
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);
+        prepare();
+    }
+        private void prepare(){
+            Ben ben = new Ben();
+            addObject(ben, 100, 300);
         
-        Ben ben = new Ben();
-        addObject(ben, 300, 300);
+        
+        Bear bear = new Bear();
+       addObject(bear, 500, 300);
     }
 }
+
