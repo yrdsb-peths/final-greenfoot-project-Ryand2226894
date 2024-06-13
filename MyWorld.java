@@ -22,11 +22,11 @@ public class MyWorld extends World
     }
         private void prepare(){
             Ben ben = new Ben();
-            addObject(ben, 100, 300);
+            addObject(ben, 100, 600);
         
         
         Bear bear = new Bear();
-       addObject(bear, 500, 300);
+       addObject(bear, 500, 600);
     }
 }
 
